@@ -8,6 +8,19 @@
 <p>
 <%= image_tag @picture.picture_show(:medium) %>
 </p>
+<br>
+Added on: <%= time_ago_in_words(@picture.created_at) %>
+<p>
+<%= link_to 'Edit', edit_picture_path(@picture) %>
+</p>
+<p>
+<%= link_to 'Destroy', @picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
+
+
+<h3>Likes</h3>
+<%= @picture.likes %>
+<%= button_to "Like", action: "like" %>
 
 <h3>Comments</h3>
 
@@ -15,7 +28,7 @@
 	<p>
 		<%= comment.comment %>
 		<br>
-		Added on: <%= comment.created_at %>
+		Added on: <%= time_ago_in_words(comment.created_at) %>
 	</p>
 <% end %>
 

@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :set_picture, only: [:show, :edit, :update, :destroy, :like]
 
   # GET /pictures
   # GET /pictures.json
@@ -12,6 +12,14 @@ class PicturesController < ApplicationController
   def show
     @comment = Comment.new
   end
+
+  def like
+    @picture.likes += 1
+    @picture.save
+    redirect_to @picture
+  end
+
+
 
   # GET /pictures/new
   def new

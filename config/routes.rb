@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :comments
 
   resources :pictures do
+    member do
+      post 'like'
+    end
     resources :comments
   end
 

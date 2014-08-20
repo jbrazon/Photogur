@@ -5,10 +5,10 @@ class Picture < ActiveRecord::Base
 
 	def picture_show(size)
   	# no url but there is an avatar
-	  	if self.url.nil? && !(self.avatar_content_type.nil?)
+	  	if !(self.avatar_content_type.nil?)
 	  		self.avatar.url(size)
 	  	# no avatar but there is a url
-	  	elsif !(self.url.nil?) && self.avatar_content_type.nil?
+	  	elsif !(self.url.nil?)
 	  		self.url
 	  	# otherwise
 		else
