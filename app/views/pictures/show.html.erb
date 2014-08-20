@@ -4,6 +4,14 @@
   <strong>Title:</strong>
   <%= @picture.title %>
 </p>
+<p>
+  <strong>Description:</strong>
+  <%= @picture.description %>
+</p>
+<p>
+  <strong>Submitted By:</strong>
+  <%= @picture.submitted_by %>
+</p>
 
 <p>
 <%= image_tag @picture.picture_show(:medium) %>
