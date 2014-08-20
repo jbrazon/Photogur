@@ -17,7 +17,9 @@
 <%= image_tag @picture.picture_show(:medium) %>
 </p>
 <br>
-Added on: <%= time_ago_in_words(@picture.created_at) %>
+Added: <%= time_ago_in_words(@picture.created_at) %> ago
+<br> 
+Tags: <%= @picture.tags %>
 <p>
 <%= link_to 'Edit', edit_picture_path(@picture) %>
 </p>
@@ -36,7 +38,7 @@ Added on: <%= time_ago_in_words(@picture.created_at) %>
 	<p>
 		<%= comment.comment %>
 		<br>
-		Added on: <%= time_ago_in_words(comment.created_at) %>
+		Added: <%= time_ago_in_words(comment.created_at) %> ago
 	</p>
 <% end %>
 

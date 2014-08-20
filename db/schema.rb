@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820213357) do
+ActiveRecord::Schema.define(version: 20140820225007) do
 
   create_table "comments", force: true do |t|
     t.text     "comment"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140820213357) do
     t.integer  "likes",               default: 0, null: false
     t.text     "description"
     t.string   "submitted_by"
+    t.string   "tags"
   end
 
 end

@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'carrierwave'
 gem "paperclip", "~> 4.1"
+gem 'searchlogic'
 
 
 
