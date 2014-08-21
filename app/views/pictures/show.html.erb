@@ -16,10 +16,13 @@
 <p>
 <%= image_tag @picture.picture_show(:medium) %>
 </p>
+<p>
 <br>
 Added: <%= time_ago_in_words(@picture.created_at) %> ago
 <br> 
 Tags: <%= @picture.tags %>
+</p>
+<br>
 <p>
 <%= link_to 'Edit', edit_picture_path(@picture) %>
 </p>
@@ -47,5 +50,4 @@ Tags: <%= @picture.tags %>
 <h3>New Comment</h3>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
