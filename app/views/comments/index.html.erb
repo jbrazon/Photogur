@@ -12,7 +12,7 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.comment %></td>
+        <td><%= comment.entry %></td>
         <td><%= comment.picture %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
