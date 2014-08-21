@@ -1,12 +1,12 @@
 <%= stylesheet_link_tag "bootstrap.min" %>
 <%= stylesheet_link_tag "stylesheet" %>
-<h1>Photogur</h1>
+<h1>Explore</h1>
 
 <table>
   <tbody>
     <% @pictures.each do |picture| %>
       <tr>
-        <td><%= link_to (image_tag picture.picture_show(:thumb)), picture %></td>
+        <td><%= link_to (image_tag picture.picture_show(:thumb), size:"260x180"), picture %></td>
       </tr>
     <% end %>
   </tbody>

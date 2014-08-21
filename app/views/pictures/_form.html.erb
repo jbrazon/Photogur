@@ -15,24 +15,30 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+
     <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
+
       <div class="field">
     <%= f.label :tags %><br>
     <%= f.text_field :tags %>
   </div>
-    </div>
+  
     <div class="field">
     <%= f.label :submitted_by %><br>
     <%= f.text_field :submitted_by %>
   </div>
+
   <div class="field">
     <%= f.label :url %><br>
     <%= f.text_field :url %>
-  </div class="field">
+  </div>
+
+  <div class="field">
   <%= f.file_field :avatar %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

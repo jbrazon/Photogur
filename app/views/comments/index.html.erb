@@ -1,8 +1,11 @@
-<h1>Photogur</h1>
-
+<h1>Explore</h1>
+<br>
+<br>
+<br>
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Comment</th>
       <th>Picture</th>
       <th colspan="3"></th>
@@ -14,6 +17,8 @@
       <tr>
         <td><%= comment.entry %></td>
         <td><%= comment.picture %></td>
+        <td><%= picture.title %></td>
+        <td><%= image_tag picture.picture_show(:thumb), style:"max-width:100px; max-height:100px;" %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
