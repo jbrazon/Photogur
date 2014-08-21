@@ -2,19 +2,19 @@
 <html>
 <head>
   <title>Photogur2</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
-
 <!-- Button trigger modal -->
-<button class="btn btn-primary btn-md">
+<div id="indexbtn">
+<button class="btn btn-default">
 <%= link_to 'New Picture', new_picture_path %>
 </button>
-
+</div>
+</body>
 <div class="container">
 <%= yield %>
 </div>

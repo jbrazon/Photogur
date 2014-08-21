@@ -1,17 +1,12 @@
-
 <h1>Photogur</h1>
-
-<table>
-  <tbody>
-    
-  </tbody>
-</table>
-
-
+<hr>
 <div id="grid" data-columns>
-<% @pictures.each do |picture| %>
-        <div class="column size-1of4"><%= link_to (image_tag picture.picture_show(:thumb), size:"260x180", id:"post"), picture %></div>
+<div id="posts">
+	<% @pictures.each do |picture| %>
+        <div class="column size-1of4"><%= link_to (image_tag picture.picture_show(:thumb), 
+        style:"max-width: 80%;max-height: 80%;", class:"post"), picture %></div>
     <% end %>
+</div>
 </div>
 
 <br>

@@ -1,7 +1,7 @@
+<h1>Photogur</h1>
+<hr>
 <p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Title:</strong>
   <%= @picture.title %>
 </p>
 <p>
@@ -12,25 +12,21 @@
   <strong>Submitted By:</strong>
   <%= @picture.submitted_by %>
 </p>
-
 <p>
 <%= image_tag @picture.picture_show(:medium) %>
 </p>
 <p>
 <br>
 Added: <%= time_ago_in_words(@picture.created_at) %> ago
-<br> 
-Tags: <%= @picture.tags %>
-</p>
 <br>
-<p>
+<div >
+<p id="trashedit">
 <%= link_to 'Edit', edit_picture_path(@picture) %>
+<%= link_to 'Delete', @picture, method: :delete, data: { confirm: 'Are you sure?' } %>
 </p>
 <p>
-<%= link_to 'Destroy', @picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+
 </p>
-
-
 <h3>Likes</h3>
 <%= @picture.likes %>
 <%= button_to "Like", action: "like" %>
@@ -48,6 +44,10 @@ Tags: <%= @picture.tags %>
 <% end %>
 
 <h3>New Comment</h3>
+
+
+
+
 <%= render 'comments/form' %>
 
 <%= link_to 'Back', pictures_path %>

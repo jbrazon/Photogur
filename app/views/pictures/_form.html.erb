@@ -1,4 +1,4 @@
-<%= form_for(@picture, html: { :multipart => true }) do |f| %>
+<%= form_for(@picture, html: { :multipart => true, role:"form" }) do |f| %>
   <% if @picture.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
@@ -10,36 +10,32 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <br>
+  <div class="form-group">
+    <%= f.text_field :title, class:"form-control", placeholder: "Write a caption..." %>
   </div>
-
-    <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-
-      <div class="field">
-    <%= f.label :tags %><br>
-    <%= f.text_field :tags %>
-  </div>
-  
-    <div class="field">
-    <%= f.label :submitted_by %><br>
-    <%= f.text_field :submitted_by %>
-  </div>
-
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
-  </div>
-
-  <div class="field">
+  <hr>
+  <div class="form-group">
+    <%= f.text_field :description,class:"form-control", placeholder:"describe your photo"  %>
+   </div> 
+  <hr>
+  <div class="form-group">
+    <%= f.text_field :submitted_by ,class:"form-control", placeholder:"who are you?"  %>
+   </div> 
+   <hr>
+   <div class="form-group">
+    <%= f.text_field :url,class:"form-control", placeholder:"http://..."  %>
+   </div> 
+  <hr>
+  <h4>or upload from your library...</h4> 
+  <br>
+  <div class="form-group">
   <%= f.file_field :avatar %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+   <hr>
+  <div id="uploadbtn" class="actions">
+    <%= f.submit class:"btn btn-default" %>
   </div>
+   <hr>
+</form>
 <% end %>
