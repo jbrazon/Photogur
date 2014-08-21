@@ -12,9 +12,10 @@
   <strong>Submitted By:</strong>
   <%= @picture.submitted_by %>
 </p>
-<p>
-<%= image_tag @picture.picture_show(:medium) %>
+<p id="img_effect">
+<%= image_tag @picture.picture_show(:medium)%>
 </p>
+
 <p>
 <br>
 Added: <%= time_ago_in_words(@picture.created_at) %> ago
