@@ -18,7 +18,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'carrierwave'
 gem "paperclip", "~> 4.1"
 gem 'rd_searchlogic', :require => 'searchlogic', :git => 'git://github.com/railsdog/searchlogic.git'
-gem "twitter-bootstrap-rails"
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
 
 
 

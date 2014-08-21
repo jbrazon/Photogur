@@ -1,3 +1,5 @@
+$(document).ready(
+
 (function(root, factory) {
     if(typeof exports === 'object') {
         module.exports = factory();
@@ -512,4 +514,6 @@ return {
 })(window, window.document);
 
     return salvattore;
-}));
+}))
+
+)

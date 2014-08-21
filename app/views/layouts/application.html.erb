@@ -8,11 +8,17 @@
 </head>
 <body>
 
-<script src="salvattore.js"></script> 
+
+
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-md">
+<%= link_to 'New Picture', new_picture_path %>
+</button>
 
 <div class="container">
 <%= yield %>
 </div>
+
 
 </body>
 </html>
