@@ -1,8 +1,9 @@
 
 <p id="notice"><%= notice %></p>
-<p>
+<p id="title">
   <%= @picture.title %>
 </p>
+<hr>
 <p>
   <strong>Description:</strong>
   <%= @picture.description %>
@@ -11,39 +12,37 @@
   <strong>Submitted By:</strong>
   <%= @picture.submitted_by %>
 </p>
+<hr>
 <p id="img_effect">
 <%= image_tag @picture.picture_show(:medium)%>
 </p>
 
 <p>
 <br>
-Added: <%= time_ago_in_words(@picture.created_at) %> ago
-<br>
-<div >
-<p id="trashedit">
-<%= link_to 'Edit', edit_picture_path(@picture) %>
+<div class="likegroup">
+Added:<strong><%= time_ago_in_words(@picture.created_at) %> </strong> ago
+<div class="spacing">
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Delete', @picture, method: :delete, data: { confirm: 'Are you sure?' } %>
-</p>
-<p>
-
-</p>
-<h3>Likes</h3>
-<%= @picture.likes %>
-<%= button_to "Like", action: "like" %>
-
+<%= button_to("#{@picture.likes.to_s} Likes", { action: "like"}, class: "btn btn-primary" ) %>
+</div>
+</div>
+<hr>
 <h3>Comments</h3>
-
 <% @picture.comments.each do |comment| %>
-	<p>
-		Comment:<%= comment.entry %>
+	<p id="comments">
+		<hr>
 		<br>
-		Added: <%= time_ago_in_words(comment.created_at) %> ago
+		• <%= comment.entry %>
 		<br>
-		By: <%= comment.author %>
+		  <%= time_ago_in_words(comment.created_at) %> ago
+		<br>
+		  By: <strong><%= comment.author %></strong>
+		<br>
 	</p>
 <% end %>
-
-<h3>New Comment</h3>
+<hr>
+<h4>Leave a comment:</h4>
 
 
 

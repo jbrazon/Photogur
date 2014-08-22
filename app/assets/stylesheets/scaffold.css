@@ -8,6 +8,30 @@ body, ol, ul, td {
   background-color: #d3d3d3;
 }
 
+p#comments {
+
+  font-size: 15px;
+}
+
+p#title {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.likegroup *  {
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.spacing {
+  display: inline-block;
+  padding-left: 17em;
+
+
+}
+
 p {
 
   font-size: 20px;
@@ -27,7 +51,11 @@ p {
   z-index: 999;
 }*/
 
-
+.powered {
+  margin-top: -70px;
+  margin-left: 45em;
+  position: relative;
+}
 
 .logo {
   margin-top: 20px;
@@ -54,6 +82,7 @@ div.field, div.actions {
 
 #notice {
   color: green;
+
 }
 
 .field_with_errors {
