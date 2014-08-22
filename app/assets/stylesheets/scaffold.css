@@ -28,12 +28,16 @@ p {
 
 #indexbtn {
 margin-top: 40px;
-margin-left: 40em;
+margin-left: 40%;
+position: relative;
+
 }
+
 
 
 .logo {
   margin-top: -60px;
+  position: relative;
 }
 
 pre {
