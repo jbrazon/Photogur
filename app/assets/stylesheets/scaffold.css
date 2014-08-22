@@ -14,6 +14,8 @@ p {
 
 }
 
+
+
 #img_effect img {
     width: 50%;
 }
@@ -26,18 +28,14 @@ p {
 }*/
 
 
-#indexbtn {
-margin-top: 40px;
-margin-left: 40%;
-position: relative;
-
-}
-
-
 
 .logo {
-  margin-top: -60px;
+  margin-top: 20px;
   position: relative;
+}
+
+.new-btn {
+  margin-left: 40px;
 }
 
 pre {
